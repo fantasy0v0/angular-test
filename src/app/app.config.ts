@@ -1,8 +1,14 @@
 import { ApplicationConfig } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { RouteReuseStrategy, provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
+import { TestRouteReuseStrategy } from './strategy/TestRouteReuseStrategy';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes)]
+  providers: [
+    {
+      provide: RouteReuseStrategy, useClass: TestRouteReuseStrategy
+    },
+    provideRouter(routes)
+  ]
 };
