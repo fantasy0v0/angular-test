@@ -28,6 +28,7 @@ export class TestRouteReuseStrategy extends RouteReuseStrategy {
     console.log('shouldReuseRoute');
     console.log(curr);
     console.log(future);
+    console.log(future.routeConfig?.path);
     return future.routeConfig === curr.routeConfig;
   }
 }
