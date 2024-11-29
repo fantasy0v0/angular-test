@@ -1,0 +1,18 @@
+<p>reactive-form works!</p>
+
+<form [formGroup]="formGroup" (submit)="onSubmit()">
+  <div>
+    <label for="name">姓名:</label>
+    <input id="name" formControlName="name" />
+    @if (formGroup.get('name')?.touched && formGroup.get('name')?.hasError('required')) {
+      <span>姓名不能为空</span>
+    }
+  </div>
+
+  <div>
+    <label for="email">邮箱:</label>
+    <input id="email" formControlName="email" type="email" />
+
+  </div>
+  <button type="submit">提交</button>
+</form>

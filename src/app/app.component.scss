@@ -1,0 +1,11 @@
+div.layout {
+  display: flex;
+
+  & > div.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+}
+

@@ -331,5 +331,13 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<router-outlet />
+<div class="layout">
+  <div class="menu">
+    <a [routerLink]="['/layout/test']">测试</a>
+    <a [routerLink]="['/layout/test2']">测试2</a>
+    <a [routerLink]="['/layout/reactive-form']">响应式表单</a>
+  </div>
+  <div class="content">
+    <router-outlet />
+  </div>
+</div>
